@@ -52,7 +52,7 @@ application-prod.properties
 
 # CSV files
 *.csv
-!sample_students.csv
+sample_students.csv
 
 # Temporary files
 *.tmp
