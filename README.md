@@ -152,7 +152,6 @@ Ensure the following tools are installed:
 - MySQL 8.0+
 - IntelliJ IDEA, Eclipse, or Visual Studio Code
 - Git
-
 ```
 
 ## Future Enhancements
@@ -174,6 +173,7 @@ GradeSphere was developed to gain practical experience in:
 - File handling and CSV processing.
 - Multithreading and exception management.
 - Layered architecture and modular software development.
+```
 
 ## Author
 
@@ -184,5 +184,5 @@ GradeSphere was developed to gain practical experience in:
 <p align="center">
   <strong>GradeSphere</strong><br/>
   Simplifying Academic Performance, One Grade at a Time.
-</p>"# GradeSphere" 
+</p>
 "# GradeSphere" 
