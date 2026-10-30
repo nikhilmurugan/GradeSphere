@@ -161,6 +161,7 @@ Ensure the following tools are installed:
 - Role-based access control.
 - Enhanced dashboard and user experience.
 - Additional academic reporting capabilities.
+```
 
 ## Learning Objectives
 
@@ -185,4 +186,3 @@ GradeSphere was developed to gain practical experience in:
   <strong>GradeSphere</strong><br/>
   Simplifying Academic Performance, One Grade at a Time.
 </p>
-"# GradeSphere" 
