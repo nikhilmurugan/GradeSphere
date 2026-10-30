@@ -152,7 +152,6 @@ Ensure the following tools are installed:
 - MySQL 8.0+
 - IntelliJ IDEA, Eclipse, or Visual Studio Code
 - Git
-```
 
 ## Future Enhancements
 
@@ -161,7 +160,6 @@ Ensure the following tools are installed:
 - Role-based access control.
 - Enhanced dashboard and user experience.
 - Additional academic reporting capabilities.
-```
 
 ## Learning Objectives
 
@@ -174,7 +172,6 @@ GradeSphere was developed to gain practical experience in:
 - File handling and CSV processing.
 - Multithreading and exception management.
 - Layered architecture and modular software development.
-```
 
 ## Author
 
