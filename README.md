@@ -185,4 +185,4 @@ GradeSphere was developed to gain practical experience in:
   <strong>GradeSphere</strong><br/>
   Simplifying Academic Performance, One Grade at a Time.
 </p>"# GradeSphere" 
-"# GradeSphere-" 
+"# GradeSphere" 
