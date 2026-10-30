@@ -1,18 +1,12 @@
 
-# =====================================
-# JAVA COMPILED FILES
-# =====================================
+# Java compiled files
 *.class
 
-# =====================================
-# LOG FILES
-# =====================================
+# Log files
 *.log
 logs/
 
-# =====================================
-# BUILD & PACKAGE FILES
-# =====================================
+# Build and package files
 *.jar
 *.war
 *.nar
@@ -21,9 +15,7 @@ logs/
 *.tar.gz
 *.rar
 
-# =====================================
-# MAVEN
-# =====================================
+# Maven
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -34,9 +26,7 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
-# =====================================
-# IDE FILES
-# =====================================
+# IDE files
 .idea/
 *.iml
 *.iws
@@ -48,31 +38,24 @@ bin/
 .metadata/
 .vscode/
 
-# =====================================
-# OS FILES
-# =====================================
+# OS files
 .DS_Store
 Thumbs.db
 Desktop.ini
 
-# =====================================
-# APPLICATION CONFIGURATION
-# =====================================
+# Application configuration and secrets
+.env
+.env.*
 application-local.properties
 application-dev.properties
 application-prod.properties
-.env
-.env.*
 
-# =====================================
-# CSV / DATA FILES
-# =====================================
+# CSV files
 *.csv
 !sample_students.csv
 
-# =====================================
-# TEMPORARY FILES
-# =====================================
+# Temporary files
 *.tmp
 *.temp
 *.swp
+*.bak
