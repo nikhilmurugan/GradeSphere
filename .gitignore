@@ -1,0 +1,78 @@
+
+# =====================================
+# JAVA COMPILED FILES
+# =====================================
+*.class
+
+# =====================================
+# LOG FILES
+# =====================================
+*.log
+logs/
+
+# =====================================
+# BUILD & PACKAGE FILES
+# =====================================
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# =====================================
+# MAVEN
+# =====================================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# =====================================
+# IDE FILES
+# =====================================
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+bin/
+.metadata/
+.vscode/
+
+# =====================================
+# OS FILES
+# =====================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# =====================================
+# APPLICATION CONFIGURATION
+# =====================================
+application-local.properties
+application-dev.properties
+application-prod.properties
+.env
+.env.*
+
+# =====================================
+# CSV / DATA FILES
+# =====================================
+*.csv
+!sample_students.csv
+
+# =====================================
+# TEMPORARY FILES
+# =====================================
+*.tmp
+*.temp
+*.swp

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            color: #667eea;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .feature-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .tech-stack h2 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tech-item {
+            background: #f8f9fa;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #667eea;
+            font-weight: bold;
+            border: 2px solid #667eea;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .api-docs {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .api-docs h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .endpoint {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .method {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .method.get { background: #28a745; }
+        .method.post { background: #007bff; }
+        .method.put { background: #ffc107; color: #333; }
+        .method.delete { background: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Student Grade Calculator</h1>
+            <p class="subtitle">Comprehensive Java Project with All Concepts</p>
+        </header>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <div class="feature-title">Add Students</div>
+                <p class="feature-description">Register students with their marks and automatically calculate grades</p>
+                <a href="/students" class="btn">Manage Students</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧮</div>
+                <div class="feature-title">Calculate Grades</div>
+                <p class="feature-description">Calculate grades using servlet-based form with instant results</p>
+                <a href="/calculate-grade" class="btn btn-secondary">Calculate Now</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Import/Export CSV</div>
+                <p class="feature-description">Import student data from CSV or export results to CSV file</p>
+                <a href="#file-operations" class="btn">File Operations</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Bulk Processing</div>
+                <p class="feature-description">Process multiple students concurrently using multithreading</p>
+                <a href="#api-docs" class="btn btn-secondary">View API</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🗄️</div>
+                <div class="feature-title">Database Storage</div>
+                <p class="feature-description">All data stored in MySQL database using JDBC and JPA</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔌</div>
+                <div class="feature-title">REST API</div>
+                <p class="feature-description">Complete RESTful API built with Spring Boot</p>
+                <a href="#api-docs" class="btn btn-secondary">API Docs</a>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>🛠️ Technologies Used</h2>
+            <div class="tech-list">
+                <span class="tech-item">Java 17</span>
+                <span class="tech-item">Spring Boot</span>
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">JDBC</span>
+                <span class="tech-item">JPA/Hibernate</span>
+                <span class="tech-item">Servlets</span>
+                <span class="tech-item">Multithreading</span>
+                <span class="tech-item">File Handling</span>
+                <span class="tech-item">Generics</span>
+                <span class="tech-item">Interfaces</span>
+                <span class="tech-item">Exception Handling</span>
+                <span class="tech-item">Wrapper Classes</span>
+            </div>
+        </div>
+
+        <div class="api-docs" id="api-docs">
+            <h2>📚 API Documentation</h2>
+
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <code>/api/students</code>
+                <p>Get all students</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <code>/api/students/{id}</code>
+                <p>Get student by ID</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <code>/api/students</code>
+                <p>Create new student</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method put">PUT</span>
+                <code>/api/students/{id}</code>
+                <p>Update student</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method delete">DELETE</span>
+                <code>/api/students/{id}</code>
+                <p>Delete student</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <code>/api/students/bulk-calculate</code>
+                <p>Bulk calculate grades using multithreading</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method post">POST</span>
+                <code>/api/files/import</code>
+                <p>Import students from CSV file</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method get">GET</span>
+                <code>/api/files/export</code>
+                <p>Export students to CSV file</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Student Grade Calculator | All Java Concepts Implemented</p>
+        </footer>
+    </div>
+</body>
+</html>
